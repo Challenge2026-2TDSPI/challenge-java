@@ -6,11 +6,11 @@
 
 | Nome | RM |
 |---|---|
-| *(preencher)* | RM000000 |
-| *(preencher)* | RM000000 |
-| *(preencher)* | RM000000 |
-| *(preencher)* | RM000000 |
-| *(preencher)* | RM000000 |
+| Eduardo Augusto de Oliveira Souza | RM565269 |
+| Fellipe Costa de Oliveira | RM564673  |
+| Felype Ferreira Maschio | RM563009  |
+| Gustavo Vieira de Matos | RM563304 |
+| Pedro Henrique dos Santos Costa | RM562156 |
 
 ## Sobre o Projeto
 
