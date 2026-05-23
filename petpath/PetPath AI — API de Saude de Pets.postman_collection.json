@@ -1,0 +1,2343 @@
+{
+  "info": {
+    "_postman_id": "712c8d20-36cd-4719-979c-5141ebba4cd4",
+    "name": "PetPath AI — API de Saude de Pets",
+    "description": "API RESTful para gestao continua da saude de animais de estimacao. Desenvolvida como solucao para o FIAP Challenge 2026 — Parceiro CLYVO VET.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49045433",
+    "_collection_link": "https://go.postman.co/collection/49045433-712c8d20-36cd-4719-979c-5141ebba4cd4?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "tutores",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "Buscar tutor por ID",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/tutores/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tutores",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/tutores/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tutores",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"email\": \"maria@email.com\",\n  \"nome\": \"Maria Silva\",\n  \"id\": 5455,\n  \"cpf\": \"12345678909\",\n  \"telefone\": \"11987654321\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Atualizar tutor",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"maria@email.com\",\n  \"nome\": \"Maria Silva\",\n  \"id\": 5455,\n  \"cpf\": \"12345678909\",\n  \"telefone\": \"11987654321\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/tutores/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tutores",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"email\": \"maria@email.com\",\n  \"nome\": \"Maria Silva\",\n  \"id\": 5455,\n  \"cpf\": \"12345678909\",\n  \"telefone\": \"11987654321\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/tutores/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tutores",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"email\": \"maria@email.com\",\n  \"nome\": \"Maria Silva\",\n  \"id\": 5455,\n  \"cpf\": \"12345678909\",\n  \"telefone\": \"11987654321\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Remover tutor",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/tutores/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tutores",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/tutores/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tutores",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cadastrar",
+          "item": [
+            {
+              "name": "Cadastrar novo tutor",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"maria@email.com\",\n  \"nome\": \"Maria Silva\",\n  \"id\": 5455,\n  \"cpf\": \"12345678909\",\n  \"telefone\": \"11987654321\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/tutores/cadastrar",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tutores",
+                    "cadastrar"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"email\": \"maria@email.com\",\n  \"nome\": \"Maria Silva\",\n  \"id\": 5455,\n  \"cpf\": \"12345678909\",\n  \"telefone\": \"11987654321\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/tutores/cadastrar",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tutores",
+                        "cadastrar"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"email\": \"maria@email.com\",\n  \"nome\": \"Maria Silva\",\n  \"id\": 5455,\n  \"cpf\": \"12345678909\",\n  \"telefone\": \"11987654321\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "todos",
+          "item": [
+            {
+              "name": "Listar todos os tutores",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/tutores/todos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "tutores",
+                    "todos"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/tutores/todos",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "tutores",
+                        "todos"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 5552,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 5422,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pets",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "Buscar pet por ID",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/pets/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                },
+                "description": "Retorna um pet pelo seu ID (com caching)"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 3594,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"nome\": \"string\",\n  \"especie\": \"OUTRO\",\n  \"raca\": \"string\",\n  \"data_nascimento\": \"1980-11-13\",\n  \"peso\": 4267.790063312583,\n  \"ativo\": false\n}"
+                }
+              ]
+            },
+            {
+              "name": "Atualizar pet",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"especie\": \"CACHORRO\",\n  \"nome\": \"Rex\",\n  \"raca\": \"Labrador\",\n  \"id\": 4990,\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 2767,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"data_nascimento\": \"2020-03-15\",\n  \"peso\": 83.20798576281562,\n  \"ativo\": true\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/pets/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                },
+                "description": "Atualiza os dados de um pet existente"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"especie\": \"CACHORRO\",\n  \"nome\": \"Rex\",\n  \"raca\": \"Labrador\",\n  \"id\": 4990,\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 2767,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"data_nascimento\": \"2020-03-15\",\n  \"peso\": 83.20798576281562,\n  \"ativo\": true\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 3594,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"nome\": \"string\",\n  \"especie\": \"OUTRO\",\n  \"raca\": \"string\",\n  \"data_nascimento\": \"1980-11-13\",\n  \"peso\": 4267.790063312583,\n  \"ativo\": false\n}"
+                }
+              ]
+            },
+            {
+              "name": "Remover pet",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/pets/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                },
+                "description": "Remove um pet pelo ID"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cadastrar",
+          "item": [
+            {
+              "name": "Cadastrar novo pet",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"especie\": \"CACHORRO\",\n  \"nome\": \"Rex\",\n  \"raca\": \"Labrador\",\n  \"id\": 4990,\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 2767,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"data_nascimento\": \"2020-03-15\",\n  \"peso\": 83.20798576281562,\n  \"ativo\": true\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/pets/cadastrar",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    "cadastrar"
+                  ]
+                },
+                "description": "Cadastra um novo pet na plataforma PetPath AI"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"especie\": \"CACHORRO\",\n  \"nome\": \"Rex\",\n  \"raca\": \"Labrador\",\n  \"id\": 4990,\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 2767,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"data_nascimento\": \"2020-03-15\",\n  \"peso\": 83.20798576281562,\n  \"ativo\": true\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/cadastrar",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        "cadastrar"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 3594,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"nome\": \"string\",\n  \"especie\": \"OUTRO\",\n  \"raca\": \"string\",\n  \"data_nascimento\": \"1980-11-13\",\n  \"peso\": 4267.790063312583,\n  \"ativo\": false\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "todos",
+          "item": [
+            {
+              "name": "Listar todos os pets",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/pets/todos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    "todos"
+                  ]
+                },
+                "description": "Retorna todos os pets cadastrados (com caching)"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/todos",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        "todos"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 3808,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"nome\": \"string\",\n    \"especie\": \"PASSARO\",\n    \"raca\": \"string\",\n    \"data_nascimento\": \"1998-06-22\",\n    \"peso\": 2894.4399551591005,\n    \"ativo\": true\n  },\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 1333,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"nome\": \"string\",\n    \"especie\": \"HAMSTER\",\n    \"raca\": \"string\",\n    \"data_nascimento\": \"1978-08-09\",\n    \"peso\": 8735.481232585436,\n    \"ativo\": true\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "raca",
+          "item": [
+            {
+              "name": "Buscar pets por raca",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/pets/raca?raca=string",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    "raca"
+                  ],
+                  "query": [
+                    {
+                      "key": "raca",
+                      "value": "string"
+                    }
+                  ]
+                },
+                "description": "Busca pets por raca usando Spring JPA Query Method"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/raca?raca=string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        "raca"
+                      ],
+                      "query": [
+                        {
+                          "key": "raca",
+                          "value": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 3808,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"nome\": \"string\",\n    \"especie\": \"PASSARO\",\n    \"raca\": \"string\",\n    \"data_nascimento\": \"1998-06-22\",\n    \"peso\": 2894.4399551591005,\n    \"ativo\": true\n  },\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 1333,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"nome\": \"string\",\n    \"especie\": \"HAMSTER\",\n    \"raca\": \"string\",\n    \"data_nascimento\": \"1978-08-09\",\n    \"peso\": 8735.481232585436,\n    \"ativo\": true\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "peso",
+          "item": [
+            {
+              "name": "Buscar pets por peso minimo",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/pets/peso?peso=6627.199180978555",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    "peso"
+                  ],
+                  "query": [
+                    {
+                      "key": "peso",
+                      "value": "6627.199180978555"
+                    }
+                  ]
+                },
+                "description": "Busca pets ativos com peso acima do valor informado (JPQL)"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/peso?peso=6627.199180978555",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        "peso"
+                      ],
+                      "query": [
+                        {
+                          "key": "peso",
+                          "value": "6627.199180978555"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 3808,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"nome\": \"string\",\n    \"especie\": \"PASSARO\",\n    \"raca\": \"string\",\n    \"data_nascimento\": \"1998-06-22\",\n    \"peso\": 2894.4399551591005,\n    \"ativo\": true\n  },\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 1333,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"nome\": \"string\",\n    \"especie\": \"HAMSTER\",\n    \"raca\": \"string\",\n    \"data_nascimento\": \"1978-08-09\",\n    \"peso\": 8735.481232585436,\n    \"ativo\": true\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "paginados",
+          "item": [
+            {
+              "name": "Listar pets paginados",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/pets/paginados?page=0&size=5&ordem=nome",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    "paginados"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "5"
+                    },
+                    {
+                      "key": "ordem",
+                      "value": "nome"
+                    }
+                  ]
+                },
+                "description": "Retorna todos os pets paginados e ordenados"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/paginados?page=0&size=5&ordem=nome",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        "paginados"
+                      ],
+                      "query": [
+                        {
+                          "key": "page",
+                          "value": "0"
+                        },
+                        {
+                          "key": "size",
+                          "value": "5"
+                        },
+                        {
+                          "key": "ordem",
+                          "value": "nome"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"totalPages\": 2590,\n  \"totalElements\": 2105,\n  \"size\": 949,\n  \"content\": [\n    {\n      \"tutor\": {\n        \"email\": \"maria@email.com\",\n        \"nome\": \"Maria Silva\",\n        \"id\": 7151,\n        \"cpf\": \"12345678909\",\n        \"telefone\": \"11987654321\"\n      },\n      \"nome\": \"string\",\n      \"especie\": \"OUTRO\",\n      \"raca\": \"string\",\n      \"data_nascimento\": \"1994-08-01\",\n      \"peso\": 3160.682956948024,\n      \"ativo\": true\n    },\n    {\n      \"tutor\": {\n        \"email\": \"maria@email.com\",\n        \"nome\": \"Maria Silva\",\n        \"id\": 4371,\n        \"cpf\": \"12345678909\",\n        \"telefone\": \"11987654321\"\n      },\n      \"nome\": \"string\",\n      \"especie\": \"CACHORRO\",\n      \"raca\": \"string\",\n      \"data_nascimento\": \"2009-06-26\",\n      \"peso\": 9801.409078937395,\n      \"ativo\": true\n    }\n  ],\n  \"number\": 6080,\n  \"sort\": {\n    \"empty\": false,\n    \"sorted\": true,\n    \"unsorted\": true\n  },\n  \"first\": true,\n  \"last\": false,\n  \"numberOfElements\": 9705,\n  \"pageable\": {\n    \"offset\": 7198,\n    \"sort\": {\n      \"empty\": false,\n      \"sorted\": true,\n      \"unsorted\": true\n    },\n    \"paged\": false,\n    \"pageSize\": 9271,\n    \"pageNumber\": 3600,\n    \"unpaged\": true\n  },\n  \"empty\": true\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "buscar",
+          "item": [
+            {
+              "name": "Buscar pets por substring",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/pets/buscar?substring=string",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "pets",
+                    "buscar"
+                  ],
+                  "query": [
+                    {
+                      "key": "substring",
+                      "value": "string"
+                    }
+                  ]
+                },
+                "description": "Busca pets por substring do nome, raca ou nome do tutor (caching + SQL nativo)"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/pets/buscar?substring=string",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "pets",
+                        "buscar"
+                      ],
+                      "query": [
+                        {
+                          "key": "substring",
+                          "value": "string"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"pet_nome\": \"string\",\n    \"tutor_nome\": \"string\",\n    \"consulta_status\": \"string\",\n    \"consulta_tipo\": \"string\",\n    \"consulta_descricao\": \"string\"\n  },\n  {\n    \"pet_nome\": \"string\",\n    \"tutor_nome\": \"string\",\n    \"consulta_status\": \"string\",\n    \"consulta_tipo\": \"string\",\n    \"consulta_descricao\": \"string\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "consultas",
+      "item": [
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "Buscar consulta por ID",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                },
+                "description": "Retorna uma consulta pelo ID"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"pet\": {\n    \"especie\": \"CACHORRO\",\n    \"nome\": \"Rex\",\n    \"raca\": \"Labrador\",\n    \"id\": 7673,\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 4345,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"data_nascimento\": \"2020-03-15\",\n    \"peso\": 113.68753105446075,\n    \"ativo\": true\n  },\n  \"data_consulta\": \"1995-04-16\",\n  \"tipo\": \"EMERGENCIA\",\n  \"descricao\": \"string\",\n  \"status\": \"AGENDADA\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Atualizar consulta",
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data_consulta\": \"2025-06-10\",\n  \"descricao\": \"Vacinacao anual antirabica\",\n  \"tipo\": \"PREVENTIVA\",\n  \"id\": 6563,\n  \"pet\": {\n    \"especie\": \"CACHORRO\",\n    \"nome\": \"Rex\",\n    \"raca\": \"Labrador\",\n    \"id\": 2754,\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 8349,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"data_nascimento\": \"2020-03-15\",\n    \"peso\": 174.593614574878,\n    \"ativo\": true\n  },\n  \"status\": \"AGENDADA\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                },
+                "description": "Atualiza os dados de uma consulta existente"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"data_consulta\": \"2025-06-10\",\n  \"descricao\": \"Vacinacao anual antirabica\",\n  \"tipo\": \"PREVENTIVA\",\n  \"id\": 6563,\n  \"pet\": {\n    \"especie\": \"CACHORRO\",\n    \"nome\": \"Rex\",\n    \"raca\": \"Labrador\",\n    \"id\": 2754,\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 8349,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"data_nascimento\": \"2020-03-15\",\n    \"peso\": 174.593614574878,\n    \"ativo\": true\n  },\n  \"status\": \"AGENDADA\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"pet\": {\n    \"especie\": \"CACHORRO\",\n    \"nome\": \"Rex\",\n    \"raca\": \"Labrador\",\n    \"id\": 7673,\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 4345,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"data_nascimento\": \"2020-03-15\",\n    \"peso\": 113.68753105446075,\n    \"ativo\": true\n  },\n  \"data_consulta\": \"1995-04-16\",\n  \"tipo\": \"EMERGENCIA\",\n  \"descricao\": \"string\",\n  \"status\": \"AGENDADA\"\n}"
+                }
+              ]
+            },
+            {
+              "name": "Remover consulta",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                },
+                "description": "Remove uma consulta pelo ID"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "agendar",
+          "item": [
+            {
+              "name": "Agendar consulta",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data_consulta\": \"2025-06-10\",\n  \"descricao\": \"Vacinacao anual antirabica\",\n  \"tipo\": \"PREVENTIVA\",\n  \"id\": 6563,\n  \"pet\": {\n    \"especie\": \"CACHORRO\",\n    \"nome\": \"Rex\",\n    \"raca\": \"Labrador\",\n    \"id\": 2754,\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 8349,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"data_nascimento\": \"2020-03-15\",\n    \"peso\": 174.593614574878,\n    \"ativo\": true\n  },\n  \"status\": \"AGENDADA\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/agendar",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "agendar"
+                  ]
+                },
+                "description": "Agenda uma nova consulta para um pet"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"data_consulta\": \"2025-06-10\",\n  \"descricao\": \"Vacinacao anual antirabica\",\n  \"tipo\": \"PREVENTIVA\",\n  \"id\": 6563,\n  \"pet\": {\n    \"especie\": \"CACHORRO\",\n    \"nome\": \"Rex\",\n    \"raca\": \"Labrador\",\n    \"id\": 2754,\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 8349,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"data_nascimento\": \"2020-03-15\",\n    \"peso\": 174.593614574878,\n    \"ativo\": true\n  },\n  \"status\": \"AGENDADA\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/agendar",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        "agendar"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"pet\": {\n    \"especie\": \"CACHORRO\",\n    \"nome\": \"Rex\",\n    \"raca\": \"Labrador\",\n    \"id\": 7673,\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 4345,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"data_nascimento\": \"2020-03-15\",\n    \"peso\": 113.68753105446075,\n    \"ativo\": true\n  },\n  \"data_consulta\": \"1995-04-16\",\n  \"tipo\": \"EMERGENCIA\",\n  \"descricao\": \"string\",\n  \"status\": \"AGENDADA\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "todas",
+          "item": [
+            {
+              "name": "Listar todas as consultas",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/todas",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "todas"
+                  ]
+                },
+                "description": "Retorna todas as consultas cadastradas (caching)"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/todas",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        "todas"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"pet\": {\n      \"especie\": \"CACHORRO\",\n      \"nome\": \"Rex\",\n      \"raca\": \"Labrador\",\n      \"id\": 6465,\n      \"tutor\": {\n        \"email\": \"maria@email.com\",\n        \"nome\": \"Maria Silva\",\n        \"id\": 3656,\n        \"cpf\": \"12345678909\",\n        \"telefone\": \"11987654321\"\n      },\n      \"data_nascimento\": \"2020-03-15\",\n      \"peso\": 192.1220061694508,\n      \"ativo\": true\n    },\n    \"data_consulta\": \"1970-06-27\",\n    \"tipo\": \"PREVENTIVA\",\n    \"descricao\": \"string\",\n    \"status\": \"AGENDADA\"\n  },\n  {\n    \"pet\": {\n      \"especie\": \"CACHORRO\",\n      \"nome\": \"Rex\",\n      \"raca\": \"Labrador\",\n      \"id\": 490,\n      \"tutor\": {\n        \"email\": \"maria@email.com\",\n        \"nome\": \"Maria Silva\",\n        \"id\": 8208,\n        \"cpf\": \"12345678909\",\n        \"telefone\": \"11987654321\"\n      },\n      \"data_nascimento\": \"2020-03-15\",\n      \"peso\": 20.09749180985713,\n      \"ativo\": true\n    },\n    \"data_consulta\": \"2024-09-28\",\n    \"tipo\": \"PREVENTIVA\",\n    \"descricao\": \"string\",\n    \"status\": \"CANCELADA\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "por-status",
+          "item": [
+            {
+              "name": "Buscar consultas por status",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/por-status?status=AGENDADA",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "por-status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "AGENDADA"
+                    }
+                  ]
+                },
+                "description": "Retorna consultas filtradas por status via JPQL"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/por-status?status=AGENDADA",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        "por-status"
+                      ],
+                      "query": [
+                        {
+                          "key": "status",
+                          "value": "AGENDADA"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"pet\": {\n      \"especie\": \"CACHORRO\",\n      \"nome\": \"Rex\",\n      \"raca\": \"Labrador\",\n      \"id\": 6465,\n      \"tutor\": {\n        \"email\": \"maria@email.com\",\n        \"nome\": \"Maria Silva\",\n        \"id\": 3656,\n        \"cpf\": \"12345678909\",\n        \"telefone\": \"11987654321\"\n      },\n      \"data_nascimento\": \"2020-03-15\",\n      \"peso\": 192.1220061694508,\n      \"ativo\": true\n    },\n    \"data_consulta\": \"1970-06-27\",\n    \"tipo\": \"PREVENTIVA\",\n    \"descricao\": \"string\",\n    \"status\": \"AGENDADA\"\n  },\n  {\n    \"pet\": {\n      \"especie\": \"CACHORRO\",\n      \"nome\": \"Rex\",\n      \"raca\": \"Labrador\",\n      \"id\": 490,\n      \"tutor\": {\n        \"email\": \"maria@email.com\",\n        \"nome\": \"Maria Silva\",\n        \"id\": 8208,\n        \"cpf\": \"12345678909\",\n        \"telefone\": \"11987654321\"\n      },\n      \"data_nascimento\": \"2020-03-15\",\n      \"peso\": 20.09749180985713,\n      \"ativo\": true\n    },\n    \"data_consulta\": \"2024-09-28\",\n    \"tipo\": \"PREVENTIVA\",\n    \"descricao\": \"string\",\n    \"status\": \"CANCELADA\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "por-data",
+          "item": [
+            {
+              "name": "Buscar consultas por data",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/por-data?data=2018-11-26",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "por-data"
+                  ],
+                  "query": [
+                    {
+                      "key": "data",
+                      "value": "2018-11-26"
+                    }
+                  ]
+                },
+                "description": "Retorna projecoes de consultas a partir de uma data (SQL nativo + caching)"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/por-data?data=2018-11-26",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        "por-data"
+                      ],
+                      "query": [
+                        {
+                          "key": "data",
+                          "value": "2018-11-26"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"pet_nome\": \"string\",\n    \"tutor_nome\": \"string\",\n    \"consulta_status\": \"string\",\n    \"consulta_tipo\": \"string\",\n    \"consulta_descricao\": \"string\"\n  },\n  {\n    \"pet_nome\": \"string\",\n    \"tutor_nome\": \"string\",\n    \"consulta_status\": \"string\",\n    \"consulta_tipo\": \"string\",\n    \"consulta_descricao\": \"string\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "paginadas",
+          "item": [
+            {
+              "name": "Listar consultas paginadas",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/consultas/paginadas?page=0&size=5",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "consultas",
+                    "paginadas"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "5"
+                    }
+                  ]
+                },
+                "description": "Retorna consultas paginadas e ordenadas por id"
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/consultas/paginadas?page=0&size=5",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "consultas",
+                        "paginadas"
+                      ],
+                      "query": [
+                        {
+                          "key": "page",
+                          "value": "0"
+                        },
+                        {
+                          "key": "size",
+                          "value": "5"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"totalPages\": 5576,\n  \"totalElements\": 7170,\n  \"size\": 7645,\n  \"content\": [\n    {\n      \"pet\": {\n        \"especie\": \"CACHORRO\",\n        \"nome\": \"Rex\",\n        \"raca\": \"Labrador\",\n        \"id\": 5160,\n        \"tutor\": {\n          \"email\": \"maria@email.com\",\n          \"nome\": \"Maria Silva\",\n          \"id\": 1505,\n          \"cpf\": \"12345678909\",\n          \"telefone\": \"11987654321\"\n        },\n        \"data_nascimento\": \"2020-03-15\",\n        \"peso\": 195.8358540286386,\n        \"ativo\": true\n      },\n      \"data_consulta\": \"1978-09-11\",\n      \"tipo\": \"PREVENTIVA\",\n      \"descricao\": \"string\",\n      \"status\": \"AGENDADA\"\n    },\n    {\n      \"pet\": {\n        \"especie\": \"CACHORRO\",\n        \"nome\": \"Rex\",\n        \"raca\": \"Labrador\",\n        \"id\": 5462,\n        \"tutor\": {\n          \"email\": \"maria@email.com\",\n          \"nome\": \"Maria Silva\",\n          \"id\": 8138,\n          \"cpf\": \"12345678909\",\n          \"telefone\": \"11987654321\"\n        },\n        \"data_nascimento\": \"2020-03-15\",\n        \"peso\": 182.69007313881335,\n        \"ativo\": true\n      },\n      \"data_consulta\": \"1980-09-27\",\n      \"tipo\": \"TERAPEUTICA\",\n      \"descricao\": \"string\",\n      \"status\": \"CANCELADA\"\n    }\n  ],\n  \"number\": 8176,\n  \"sort\": {\n    \"empty\": true,\n    \"sorted\": false,\n    \"unsorted\": true\n  },\n  \"first\": false,\n  \"last\": false,\n  \"numberOfElements\": 4172,\n  \"pageable\": {\n    \"offset\": 9555,\n    \"sort\": {\n      \"empty\": true,\n      \"sorted\": true,\n      \"unsorted\": true\n    },\n    \"paged\": false,\n    \"pageSize\": 9978,\n    \"pageNumber\": 4744,\n    \"unpaged\": true\n  },\n  \"empty\": false\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "usuarios",
+      "item": [
+        {
+          "name": "novo",
+          "item": [
+            {
+              "name": "inserir",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": 1394,\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 7079,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"rm\": \"string\",\n  \"senha\": \"string\",\n  \"permissao\": \"string\",\n  \"dataCriacao\": \"1982-02-13\",\n  \"status\": \"ATIVO\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/novo",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    "novo"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"id\": 1394,\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 7079,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"rm\": \"string\",\n  \"senha\": \"string\",\n  \"permissao\": \"string\",\n  \"dataCriacao\": \"1982-02-13\",\n  \"status\": \"ATIVO\"\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/usuarios/novo",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "usuarios",
+                        "novo"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 3613,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"rm\": \"string\",\n  \"permissao\": \"string\",\n  \"dataCriacao\": \"1982-07-10\",\n  \"status\": \"ATIVO\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "{id}",
+          "item": [
+            {
+              "name": "buscar Por Id 3",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/:id",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "4003"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/usuarios/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "usuarios",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n  \"tutor\": {\n    \"email\": \"maria@email.com\",\n    \"nome\": \"Maria Silva\",\n    \"id\": 3613,\n    \"cpf\": \"12345678909\",\n    \"telefone\": \"11987654321\"\n  },\n  \"rm\": \"string\",\n  \"permissao\": \"string\",\n  \"dataCriacao\": \"1982-07-10\",\n  \"status\": \"ATIVO\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "todos",
+          "item": [
+            {
+              "name": "listar Todos",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/todos",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    "todos"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/usuarios/todos",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "usuarios",
+                        "todos"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 547,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"rm\": \"string\",\n    \"permissao\": \"string\",\n    \"dataCriacao\": \"2006-01-07\",\n    \"status\": \"BLOQUEADO\"\n  },\n  {\n    \"tutor\": {\n      \"email\": \"maria@email.com\",\n      \"nome\": \"Maria Silva\",\n      \"id\": 7284,\n      \"cpf\": \"12345678909\",\n      \"telefone\": \"11987654321\"\n    },\n    \"rm\": \"string\",\n    \"permissao\": \"string\",\n    \"dataCriacao\": \"1990-04-08\",\n    \"status\": \"BLOQUEADO\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "status",
+          "item": [
+            {
+              "name": "buscar Por Status",
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/usuarios/status?status=BLOQUEADO",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "usuarios",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "BLOQUEADO"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/usuarios/status?status=BLOQUEADO",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "usuarios",
+                        "status"
+                      ],
+                      "query": [
+                        {
+                          "key": "status",
+                          "value": "BLOQUEADO"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n  {\n    \"status\": \"string\",\n    \"rm\": \"string\",\n    \"permissao\": \"string\",\n    \"nome\": \"string\",\n    \"email\": \"string\",\n    \"data_criacao\": \"string\"\n  },\n  {\n    \"status\": \"string\",\n    \"rm\": \"string\",\n    \"permissao\": \"string\",\n    \"nome\": \"string\",\n    \"email\": \"string\",\n    \"data_criacao\": \"string\"\n  }\n]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "remover",
+          "item": [
+            {
+              "name": "{id}",
+              "item": [
+                {
+                  "name": "remover 3",
+                  "request": {
+                    "method": "DELETE",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/usuarios/remover/:id",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "usuarios",
+                        "remover",
+                        ":id"
+                      ],
+                      "variable": [
+                        {
+                          "key": "id",
+                          "value": "4003"
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "name": "OK",
+                      "originalRequest": {
+                        "method": "DELETE",
+                        "header": [
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/usuarios/remover/:id",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "usuarios",
+                            "remover",
+                            ":id"
+                          ],
+                          "variable": [
+                            {
+                              "key": "id",
+                              "value": "4003"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "text",
+                      "header": [],
+                      "cookie": [],
+                      "body": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "autenticacao",
+      "item": [
+        {
+          "name": "login",
+          "item": [
+            {
+              "name": "logar",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/autenticacao/login?usuario=string&senha=string&duracao=60",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "autenticacao",
+                    "login"
+                  ],
+                  "query": [
+                    {
+                      "key": "usuario",
+                      "value": "string"
+                    },
+                    {
+                      "key": "senha",
+                      "value": "string"
+                    },
+                    {
+                      "key": "duracao",
+                      "value": "60"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "OK",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/autenticacao/login?usuario=string&senha=string&duracao=60",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "autenticacao",
+                        "login"
+                      ],
+                      "query": [
+                        {
+                          "key": "usuario",
+                          "value": "string"
+                        },
+                        {
+                          "key": "senha",
+                          "value": "string"
+                        },
+                        {
+                          "key": "duracao",
+                          "value": "60"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "text",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "*/*"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "string"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ]
+}
